@@ -15,7 +15,7 @@ const App = () => {
 
   // Fetch chats
   useEffect(() => {
-    axios.get("http://localhost:5000/api/chats")
+    axios.get("https://ai-customer-support-chatbot-on9i.onrender.com/api/chats")
       .then(res => {
         const data = res.data;
 
@@ -48,7 +48,7 @@ const App = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/chat", {
+      const res = await axios.post("https://ai-customer-support-chatbot-on9i.onrender.com/api/chat", {
         message,
         chatId
       });
